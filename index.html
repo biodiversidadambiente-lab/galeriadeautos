@@ -3,32 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exhibición de Carros Clásicos</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <title>Exhibición de Autos de Ensueño</title>
+    <!-- Carga del CDN de Tailwind CSS para un diseño moderno y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuraciones personalizadas de Tailwind */
+        :root {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Estilo para el efecto de sombra en la tarjeta */
+        .car-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .car-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Galería de Autos de Exhibición</h1>
-        <p>Una colección de clásicos y superdeportivos.</p>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Sección de Cabecera (Hero) -->
+    <header class="bg-gray-900 text-white shadow-2xl">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-4">
+                Exhibición Maestra de Autos
+            </h1>
+            <p class="text-xl md:text-2xl font-light opacity-80">
+                Donde el arte de la ingeniería se encuentra con la pasión por la velocidad.
+            </p>
+        </div>
     </header>
 
-    <main class="galeria-autos">
-        <div class="auto-item">
-            <img src="Nueva carpeta/imagens/ford-mustang-clasico-electrico-scaled.webp" alt="Descripción del Auto 1">
-            <h2>Clásico Deportivo</h2>
-            <p>Un ícono de los años 60, motor V8.</p>
-        </div>
-
-        <div class="auto-item">
-            <img src="Nueva carpeta/imagens/Hennessey_20Venom_20F5.jpg" alt="Descripción del Auto 2">
-            <h2>Superdeportivo Moderno</h2>
-            <p>Máxima velocidad e ingeniería avanzada.</p>
-        </div>
+    <!-- Sección Principal de la Galería -->
+    <main class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         
-        </main>
+        <h2 class="text-3xl font-bold text-center mb-10 text-gray-900">Nuestros Vehículos Destacados</h2>
 
-    <footer>
-        <p>&copy; 2025 Mi Exhibición de Autos</p>
+        <!-- Contenedor de la Galería (Grid Responsiva) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Tarjeta de Auto 1: Muscle Classic -->
+            <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <img src="https://placehold.co/600x400/b91c1c/ffffff?text=Muscle+Classic" 
+                     alt="Automóvil clásico de gran potencia" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-red-700 mb-2">Clásico V8 Americano</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Un ícono de los años 60. Motor rugiente, diseño legendario y pura adrenalina.
+                    </p>
+                    <div class="flex justify-between items-center text-sm font-medium">
+                        <span class="text-gray-500">Año: 1969</span>
+                        <a href="#" class="text-red-600 hover:text-red-800 transition duration-300">Ver Detalles &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Auto 2: Modern Hypercar -->
+            <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <img src="https://placehold.co/600x400/2563eb/ffffff?text=Hypercar+Moderno" 
+                     alt="Superdeportivo moderno de alta velocidad" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-blue-700 mb-2">Hiperdeportivo del Futuro</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Ingeniería avanzada. Chasis de carbono y una velocidad que desafía la física.
+                    </p>
+                    <div class="flex justify-between items-center text-sm font-medium">
+                        <span class="text-gray-500">Año: 2024</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300">Ver Detalles &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Auto 3: Luxury Sedan -->
+            <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <img src="https://placehold.co/600x400/1e293b/ffffff?text=Sedán+de+Lujo" 
+                     alt="Sedán de lujo elegante" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Lujo Alemán Premium</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Máxima comodidad y tecnología de punta, envuelto en una carrocería imponente.
+                    </p>
+                    <div class="flex justify-between items-center text-sm font-medium">
+                        <span class="text-gray-500">Año: 2022</span>
+                        <a href="#" class="text-gray-700 hover:text-gray-900 transition duration-300">Ver Detalles &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Auto 4: Vintage Roadster -->
+            <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <img src="https://placehold.co/600x400/94a3b8/ffffff?text=Roadster+Vintage" 
+                     alt="Roadster vintage color plata" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Roadster Clásico Inglés</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        La definición de la elegancia. Perfecto para un paseo bajo el sol.
+                    </p>
+                    <div class="flex justify-between items-center text-sm font-medium">
+                        <span class="text-gray-500">Año: 1955</span>
+                        <a href="#" class="text-indigo-600 hover:text-indigo-800 transition duration-300">Ver Detalles &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta de Auto 5: Off-Road Beast -->
+            <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <img src="https://placehold.co/600x400/059669/ffffff?text=Bestia+Off-Road" 
+                     alt="Vehículo todo terreno robusto" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Bestia Todo Terreno</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Diseñado para conquistar cualquier camino. Potencia y durabilidad extremas.
+                    </p>
+                    <div class="flex justify-between items-center text-sm font-medium">
+                        <span class="text-gray-500">Año: 2023</span>
+                        <a href="#" class="text-green-600 hover:text-green-800 transition duration-300">Ver Detalles &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Auto 6: Italian Sports Car -->
+            <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <img src="https://placehold.co/600x400/f59e0b/ffffff?text=Deportivo+Italiano" 
+                     alt="Auto deportivo italiano naranja" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-yellow-700 mb-2">Deportivo Italiano Feroz</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Diseño audaz y un motor que canta. La pasión del Mediterráneo en cuatro ruedas.
+                    </p>
+                    <div class="flex justify-between items-center text-sm font-medium">
+                        <span class="text-gray-500">Año: 2018</span>
+                        <a href="#" class="text-yellow-600 hover:text-yellow-800 transition duration-300">Ver Detalles &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de Página (Footer) -->
+    <footer class="bg-gray-900 mt-12">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; 2025 AutoShow. Todos los derechos reservados.</p>
+            <p class="mt-2 text-xs">Desarrollado con Tailwind CSS para un diseño limpio y responsivo.</p>
+        </div>
     </footer>
+
 </body>
 </html>
